@@ -1,0 +1,15 @@
+stages:
+  - trigger_jenkins
+
+trigger_jenkins:
+  stage: trigger_jenkins
+  image: alpine:latest  # Lightweight image with apk package manager
+  script:
+    - apk add --no-cache curl  # Install curl
+    - curl -X POST http://35.233.64.22:8080/job/mk/build?token=118de01ce2e761bdfd49216a1f98f786e1
+  only:
+    - main
+    - dev
+  tags:
+    - jenkins
+    - docker

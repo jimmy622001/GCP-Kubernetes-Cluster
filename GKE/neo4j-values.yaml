@@ -1,0 +1,15 @@
+auth:
+  password: ${NEO4J_PASSWORD}
+nameOverride: neo4j
+enabled: true
+persistence:
+  size: 50Gi
+  storageClass: "standard"
+resources:
+  requests:
+    memory: "2Gi"
+    cpu: "1"
+  limits:
+    memory: "4Gi"
+    cpu: "2"
+replicaCount: 2

@@ -1,0 +1,14 @@
+postgresqlPassword: ${POSTGRESQL_PASSWORD}
+postgresqlDatabase: ${POSTGRESQL_DATABASE}
+postgresqlUsername: ${POSTGRESQL_USER}
+persistence:
+  size: 50Gi
+  storageClass: "standard"
+resources:
+  requests:
+    memory: "2Gi"
+    cpu: "1"
+  limits:
+    memory: "4Gi"
+    cpu: "2"
+replicaCount: 2
