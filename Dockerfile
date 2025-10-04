@@ -1,5 +1,5 @@
 # Use a lightweight base image
-FROM alpine:3.16
+FROM alpine:3.18.12
 
 # Install required packages: curl for downloading Helm, and bash for scripting
 RUN apk add --no-cache curl bash
